@@ -1,7 +1,7 @@
 ---
 ## Author
 author:
-  name: Ситникова Диана Алексндровна
+  name: Ситникова Диана Александровна
   degrees: BSc
   email: 1032201746@rudn.ru
   affiliation:
