@@ -143,7 +143,7 @@ grep -E '\.conf$' file.txt
 ## Списки объединены, конфигурационные файлы отобраны
 
 :::::::::::::: {.columns align=center}
-::: {.column width="30%"}
+::: {.column width="40%"}
 
 ~~~bash
 ls -1 /etc > file.txt
@@ -155,7 +155,7 @@ grep -E '\.conf$' file.txt |
 `file.txt` содержит два последовательных списка, `conf.txt` --- только имена с расширением `.conf`.
 
 :::
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ![](image/fig-004.png){width=100%}
 
@@ -165,7 +165,7 @@ grep -E '\.conf$' file.txt |
 ## Файлы на `c` найдены тремя способами
 
 :::::::::::::: {.columns align=center}
-::: {.column width="31%"}
+::: {.column width="40%"}
 
 1. Условие `-name` команды `find`.
 2. Шаблон Bash и проверка `-f`.
@@ -177,7 +177,7 @@ grep -E '\.conf$' file.txt |
 - `conf.txt`.
 
 :::
-::: {.column width="69%"}
+::: {.column width="60%"}
 
 ![](image/fig-003.png){width=100%}
 
@@ -187,7 +187,7 @@ grep -E '\.conf$' file.txt |
 ## Длительный поиск выполнен в фоне
 
 :::::::::::::: {.columns align=center}
-::: {.column width="31%"}
+::: {.column width="40%"}
 
 ~~~bash
 find / -type f -name 'log*' \
@@ -201,7 +201,7 @@ wait "$search_pid"
 Терминал оставался доступным, а результат накапливался в `logfile`.
 
 :::
-::: {.column width="69%"}
+::: {.column width="60%"}
 
 ![](image/fig-002.png){width=100%}
 
@@ -211,7 +211,7 @@ wait "$search_pid"
 ## PID `gedit` определён и процесс завершён
 
 :::::::::::::: {.columns align=center}
-::: {.column width="31%"}
+::: {.column width="40%"}
 
 ~~~bash
 gedit &
@@ -224,7 +224,7 @@ kill "$gedit_pid"
 Без явного параметра `kill` отправляет `SIGTERM` --- запрос корректного завершения.
 
 :::
-::: {.column width="69%"}
+::: {.column width="60%"}
 
 ![](image/fig-001.png){width=100%}
 
@@ -234,7 +234,7 @@ kill "$gedit_pid"
 ## `df` и `du` измеряют разные уровни
 
 :::::::::::::: {.columns align=center}
-::: {.column width="40%"}
+::: {.column width="60%"}
 
 | Команда | Назначение |
 |---|---|
@@ -245,7 +245,7 @@ kill "$gedit_pid"
 Корень Fedora размещён на Btrfs; заполнение составляло около 16 %.
 
 :::
-::: {.column width="60%"}
+::: {.column width="40%"}
 
 ![](image/fig-006.png){height=54mm}
 
