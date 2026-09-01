@@ -13,3 +13,8 @@
   %% TinyTeX
   \usepackage{libertine}
 }
+
+%%% Перенос длинных строк в блоках кода
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{%
+  breaklines,breakanywhere,commandchars=\\\{\}}
