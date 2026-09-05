@@ -1,26 +1,35 @@
-\IfFileExists{plex-otf.sty}{
-  %% Full TeXlive
-  % \usepackage[%
-  %   % math,
-  %   RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}
-  % ]{plex-otf}
-}{
-  %% TinyTeX
-  \usepackage{libertine}
-}
-
 %%% Load theme
-% https://deic.uab.cat/~iblanes/beamer_gallery/
 \IfFileExists{beamerthemegotham.sty}{
-  %% Full TeXlive
+  %%%% Full TeXlive
   \usetheme{gotham}
   \gothamset{
-    numbering=totalpagenumber,
+    numbering=totalframenumber,
     parttocframe default=off,
     sectiontocframe default=off,
     subsectiontocframe default=off,
+    tocframe template=gotham bullet,
+    % progressbar position=frametitle,
+    progressbar position=foot,
   }
-}{
-  %% TinyTeX
+  \renewcommand{\gothamInstituteLogoSquare}[1][4ex]{%
+    \includegraphics[height=##1]{_resources/image/logo_rudn-inverted.png}
+  }
+  % \renewcommand{\gothamtitlepagelogo}[1][4ex]{%
+  %   \includegraphics[height=##1]{_resources/image/logo_rudn.png}
+  % }
+}{%
+  %%%% TinyTeX
+  \usepackage{libertine}
+  %%%% https://deic.uab.cat/~iblanes/beamer_gallery/
   \usetheme{Madrid}
 }
+
+%%% Титульный слайд: строки по убыванию ширины
+\setbeamertemplate{author}{%
+  \centering
+  \insertauthor, направление 09.03.03 «Прикладная информатика»\par\medskip
+  {\small Преподаватель: д.ф.-м.н., профессор Кулябов Дмитрий Сергеевич}\par\medskip
+  {\small Российский университет дружбы народов им. П. Лумумбы}\par\medskip
+  {\small\insertdate}\par}
+\setbeamertemplate{date}{}
+\setbeamertemplate{institute}{}
